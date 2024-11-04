@@ -19,14 +19,14 @@ get_icon_settings() {
 }
 
 print_icon() {
-  if pgrep -x "caffeinate" > /dev/null
-  then
-    icon_name = "icon_${icon_on}"
-  else
-    icon_name = "icon_${icon_off}"
-  fi
+    local status
+    if pgrep -x "caffeinate" > /dev/null; then
+        status=$icon_on
+    else
+        status=$icon_off
+    fi
 
-  printf "%s" "${!icon_name}"
+  printf "%s" "$status"
 }
 
 main() {
