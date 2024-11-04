@@ -5,11 +5,9 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "${CURRENT_DIR}/scripts/helpers.sh"
 
 caffeinate_interpolations=(
-  "\#{caffeinate}"
   "\#{caffeinate_icon}"
 )
 caffeinate_commands=(
-  "#($CURRENT_DIR/scripts/caffeinate.sh)"
   "#($CURRENT_DIR/scripts/caffeinate_icon.sh)"
 )
 
